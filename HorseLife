@@ -19,7 +19,7 @@ end)
 
 local tgls = serv:Channel("Toggles")
 
-tgls:Toggle("Auto Colect Drop",false, function(bool)
+tgls:Toggle("Auto-Colect",false, function(bool)
 local args = {
     [1] = "\1"
 }
@@ -45,7 +45,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SendDropsRemote"):FireServer(unpack(args))
-DiscordLib:Notification("Notification", "Auto Colect Drop", "Okay!")
+DiscordLib:Notification("Notification", "Auto-Colect", "Okay!")
 print(bool)
 end)
 
